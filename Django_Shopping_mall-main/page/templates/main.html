@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}웹프로그래밍 쇼핑몰{% endblock %}
+{% block link %}{% static 'css/main.css' %}{% endblock %}
+{% block script %}{% static 'js/main.js' %}{% endblock %}
+{% block extrahead %}
+  <script src="{% static 'js/imageSlide.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="banner">
+  <ul class="imgs">
+    <li><img src="../static/images/banner-1.jpg" alt="배너1" /></li>
+    <li><img src="../static/images/banner-2.jpg" alt="배너2" /></li>
+    <li><img src="../static/images/banner-1.jpg" alt="배너1" /></li>
+    <li><img src="../static/images/banner-2.jpg" alt="배너2" /></li>
+  </ul>
+  <div class="banner-btn">
+    <div class="prev"><span>prev</span></div>
+    <div class="next"><span>next</span></div>
+  </div>
+</div>
+<section class="main-products">
+  <div class="product">
+    <a href="#">
+      <img src="../static/images/main-product-1.png" alt="패브릭 소파" />
+    </a>
+    <div class="product-desc">
+      <h2>패브릭 소파</h2>
+      <p>부드러운 원단, 편안한 착석감</p>
+      <a href="{% url 'item' %}">More Detail</a>
+    </div>
+  </div>
+  <div class="product">
+    <div class="product-desc">
+      <h2>1인용 소파</h2>
+      <p>부드러운 원단, 편안한 착석감</p>
+      <a href="{% url 'item' %}">More Detail</a>
+    </div>
+    <a href="#">
+      <img src="../static/images/main-product-2.png" alt="1인용 소파" />
+    </a>
+</section>
+<section class="best-seller">
+  <div class="best-container">
+    <h2>Best Seller</h2>
+    <p>가장 인기있는 제품들을 한눈에 살펴보세요</p>
+    <div class="best-products">
+      <ul class="best-list">
+        <li class="best-list-item">
+          <div class="image-container">
+            <a href="{% url 'item' %}">
+              <img src="../static/images/air-fryer-1.png" alt="에어프라이어" />
+            </a>
+            <div class="add-cart">
+              <button type="button"><span>Add To Cart</span></button>
+            </div>
+            <div class="add-wishlist">
+              <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+            </div>
+          </div>
+          <a href="{% url 'item' %}"><p>주방가전</p></a>
+          <a href="{% url 'item' %}"><h3>에어프라이어</h3></a>
+          <p>50,000</p>
+        </li>
+        <li class="best-list-item">
+          <div class="image-container">
+            <a href="{% url 'item' %}">
+              <img src="../static/images/clock-1.png" alt="시계" />
+            </a>
+            <div class="add-cart">
+              <button type="button"><span>Add To Cart</span></button>
+            </div>
+            <div class="add-wishlist">
+              <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+            </div>
+          </div>
+          <a href="{% url 'item' %}"><p>시계</p></a>
+          <a href="{% url 'item' %}"><h3>벽걸이 시계</h3></a>
+          <p>10,000</p>
+        </li>
+        <li class="best-list-item">
+          <div class="image-container">
+            <a href="{% url 'item' %}">
+              <img src="../static/images/candle-1.png" alt="캔들" />
+            </a>
+            <div class="add-cart">
+              <button type="button"><span>Add To Cart</span></button>
+            </div>
+            <div class="add-wishlist">
+              <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+            </div>
+          </div>
+          <a href="{% url 'item' %}"><p>캔들 & 디퓨저</p></a>
+          <a href="{% url 'item' %}"><h3>캔들</h3></a>
+          <p>8,000</p>
+        </li>
+        <li class="best-list-item">
+          <div class="image-container">
+            <a href="{% url 'item' %}">
+              <img src="../static/images/beam-projector-1.png" alt="빔프로젝터" />
+            </a>
+            <div class="add-cart">
+              <button type="button"><span>Add To Cart</span></button>
+            </div>
+            <div class="add-wishlist">
+              <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+            </div>
+          </div>
+          <a href="{% url 'item' %}"><p>생활가전</p></a>
+          <a href="{% url 'item' %}"><h3>빔프로젝터</h3></a>
+          <p>70,000</p>
+        </li>
+        <li class="best-list-item">
+          <div class="image-container">
+            <a href="{% url 'item' %}">
+              <img src="../static/images/bluetooth-speaker-1.png" alt="블루투스 스피커" />
+            </a>
+            <div class="add-cart">
+              <button type="button"><span>Add To Cart</span></button>
+            </div>
+            <div class="add-wishlist">
+              <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+            </div>
+          </div>
+          <a href="{% url 'item' %}"><p>음향 & 영상가전</p></a>
+          <a href="{% url 'item' %}"><h3>블루투스 스피커</h3></a>
+          <p>200,000</p>
+        </li>
+        <li class="best-list-item">
+          <div class="image-container">
+            <a href="{% url 'item' %}">
+              <img src="../static/images/lamp-1.png" alt="조명" />
+            </a>
+            <div class="add-cart">
+              <button type="button"><span>Add To Cart</span></button>
+            </div>
+            <div class="add-wishlist">
+              <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+            </div>
+          </div>
+          <a href="{% url 'item' %}"><p>조명</p></a>
+          <a href="{% url 'item' %}"><h3>스탠드 조명</h3></a>
+          <p>30,000</p>
+        </li>
+      </ul>
+    </div>
+    <div class="best-btn">
+      <div class="best-prev"><span>베스트 상품 이전 슬라이드</span></div>
+      <div class="best-next"><span>베스트 상품 다음 슬라이드</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sub-banner">
+  <h2>SAVE 30% + FREE SHIPPING<br />
+    ON SELECT TABLE & DECOR</h2>
+  <a href="{% url 'category' %}">More Detail</a>
+</section>
+<section class="products">
+  <div class="new-product">
+    <h2>New Product</h2>
+    <div class="new-list">
+      <div class="new-item">
+        <div class="md-img-container">
+          <a href="{% url 'item' %}"><img src="../static/images/table-1.png" alt="테이블"></a>
+          <button type="button" class="md-add-cart"><span>장바구니에 추가하기</span></button>
+        </div>
+        <div class="new-item-desc">
+          <a href="{% url 'item' %}"><h3>테이블</h3></a>
+          <p>50,000</p>
+        </div>
+      </div>
+      <div class="new-item">
+        <div class="md-img-container">
+          <a href="{% url 'item' %}"><img src="../static/images/bed-sheets-3.png" alt="침구"></a>
+          <button type="button" class="md-add-cart"><span>장바구니에 추가하기</span></button>
+        </div>
+        <div class="new-item-desc">
+          <a href="{% url 'item' %}"><h3>침구</h3></a>
+          <p>20,000</p>
+        </div>
+      </div>
+      <div class="new-item">
+        <div class="md-img-container">
+          <a href="{% url 'item' %}"><img src="../static/images/chair-1.png" alt="의자"></a>
+          <button type="button" class="md-add-cart"><span>장바구니에 추가하기</span></button>
+        </div>
+        <div class="new-item-desc">
+          <a href="{% url 'item' %}"><h3>의자</h3></a>
+          <p>30,000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="featured">
+    <h2>Featured Product</h2>
+    <div class="featured-list">
+      <div class="featured-item">
+        <div class="md-img-container">
+          <a href="{% url 'item' %}"><img src="../static/images/table-2.png" alt="테이블"></a>
+          <button type="button" class="md-add-cart"><span>장바구니에 추가하기</span></button>
+        </div>
+        <div class="featured-item-desc">
+          <a href="{% url 'item' %}"><h3>테이블</h3></a>
+          <p>50,000</p>
+        </div>
+      </div>
+      <div class="featured-item">
+        <div class="md-img-container">
+          <a href="{% url 'item' %}"><img src="../static/images/bed-sheets-2.png" alt="침구"></a>
+          <button type="button" class="md-add-cart"><span>장바구니에 추가하기</span></button>
+        </div>
+        <div class="featured-item-desc">
+          <a href="{% url 'item' %}"><h3>침구</h3></a>
+          <p>20,000</p>
+        </div>
+      </div>
+      <div class="featured-item">
+        <div class="md-img-container">
+          <a href="{% url 'item' %}"><img src="../static/images/chair-2.png" alt="의자"></a>
+          <button type="button" class="md-add-cart"><span>장바구니에 추가하기</span></button>
+        </div>
+        <div class="featured-item-desc">
+          <a href="{% url 'item' %}"><h3>의자</h3></a>
+          <p>30,000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

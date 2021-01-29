@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>{% block title %}아이템 추가{% endblock %}</title>
+    {% block link %}{% static 'css/newItem.css' %}{% endblock %}
+</head>
+<body>
+    
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    상품이름 <input type="text" name="name"> <br>
+    상품설명 <input type="text" name="content"> <br>
+    상품가격 <input type="text" name="price"> <br>
+    할인율 <input type="text" name="discount"> <br>
+    <input type="submit" value="등록">
+</form>
+{% endblock %}
+</body>
+</html>
+
+

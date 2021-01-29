@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 회원가입 {% endblock %}
+{% block link %} {% static 'css/register.css' %} {% endblock %}
+
+{% block content %}
+
+<div class="main-wrapper">
+    
+    <h1>Create New Customer Account</h1>
+
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <fieldset class="per-inf">
+            <div class="info-note">
+                <span>개인정보</span>
+            </div>
+            <hr>
+            <div class="name-info">
+        
+                <div class="first">
+                    <label class="label c" for="firstname">
+                        <span>이름</span>
+                    </label>
+                </div>
+                <div class="input-f">
+                    <input name="username" type="text" id="firstname" class="h" placeholder="이름">
+                </div>
+        
+            </div>
+        
+            <div class="login-info">
+        
+                <div class="email">
+                    <label class="label c" for="email">
+                        <span>아이디</span>
+                    </label>
+                </div>
+                <div class="emaiil-input">
+                    <input name="user_id" type="text" id="user_id" class="h" placeholder="아이디">
+                </div>
+        
+                <div class="password">
+                    <label class="label c" for="password">
+                        <span>비밀번호</span>
+                    </label>
+                </div>
+                <div class="pass-input">
+                    <input name="password" type="password" id="password" class="h" placeholder="비밀번호">
+                </div>
+        
+                <div class="con-password">
+                    <label class="label c" for="confirm-password">
+                        <span>비밀번호 확인</span>
+                    </label>
+                </div>
+                <div class="con-pass-input">
+                    <input name="password_confirm" type="password" id="confirm-password" class="h" placeholder="비밀번호 확인">
+                </div>
+    
+                <div class="con-password">
+                    <label class="label c" for="phone_number">
+                        <span>휴대전화</span>
+                    </label>
+                </div>
+                <div class="con-pass-input">
+                    <input type="text" name="phone_number" placeholder="휴대전화" class="h">
+                </div>
+    
+                <div class="con-password">
+                    <label class="label c" for="address">
+                        <span>주소</span>
+                    </label>
+                </div>
+                <div class="con-pass-input">
+                    <input type="text" name="address" placeholder="주소" class="h">
+                </div>
+    
+                <div class="con-password">
+                    <label class="label c" for="address">
+                        <span>이메일</span>
+                    </label>
+                </div>
+                <div class="con-pass-input">
+                    <input type="email" name="email" placeholder="이메일" class="h">
+                </div>
+    
+    
+                
+            </div>
+        </fieldset>
+        <div class="submit">
+            <input type="submit" class="register-submit" id="register-send" value="가입하기">
+        </div>
+    </form>
+    
+    
+    <div class="back">
+        <a href="{% url 'main' %}">Back</a>
+    </div>
+
+</div>
+
+<!-- <form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+    <div>
+        <label for="user_id">아이디</label><input type="text" name="user_id" placeholder="아이디">
+    </div>
+    <div>
+        <label for="username">이름</label><input type="text" name="username" placeholder="이름">
+    </div>
+    <div>
+        <label for="password">비밀번호</label><input type="password" name="password" placeholder="비밀번호">
+    </div>
+    <div>
+        <label for="password_confirm">비밀번호 확인</label><input type="password" name="password_confirm" placeholder="비밀번호 확인">
+    </div>
+    <div>
+        <label for="phone_number">휴대전화</label><input type="text" name="phone_number" placeholder="휴대전화">
+    </div>
+    <div>
+        <label for="address">주소</label><input type="text" name="address" placeholder="주소">
+    </div>
+    <div>
+        <label for="email">이메일</label><input type="email" name="email" placeholder="이메일">
+    </div>
+    <div>
+        <input type="submit" id="submit">
+    </div>
+</form> -->
+{% endblock %}

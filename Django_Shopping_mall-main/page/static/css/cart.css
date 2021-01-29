@@ -1,0 +1,143 @@
+.cart-container {
+  width: 1140px;
+  min-height: 600px;
+  padding: 0 15px;
+  margin: 50px auto;
+}
+
+.cart-title {
+  margin-bottom: 30px;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.cart-products {
+  width: 67.5%;
+}
+
+.cart-table {
+  border-collapse: collapse;
+}
+
+.cart-table thead {
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.cart-table tbody {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.cart-table th span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cart-table th:first-child {
+  display: inline-block;
+  text-align: start;
+}
+
+.cart-item td {
+  width: 120px;
+  text-align: center;
+  vertical-align: top;
+  padding: 20px 10px;
+}
+
+.cart-item td:first-child {
+  width: 250px;
+  text-align: start;
+  padding: 20px 10px 20px 0;
+}
+
+.cart-item td span {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.cart-item a {
+  display: block;
+}
+
+.item-name {
+  vertical-align: top;
+  font-weight: 900;
+}
+
+.cart-item-img {
+  width: 120px;
+  height: 120px;
+  background-color: #F5F5F5;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.cart-item-quantity {
+  width: 50px;
+  border: 1px solid #e3e3e3;
+  padding: 8px;
+  color: #222;
+}
+
+.cart-item button {
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 4px;
+}
+
+.cart-item button::before {
+  font-family: 'Pe-icon-7-stroke';
+  content: "\e680";
+  font-size: 22px;
+}
+
+.cart-item button span {
+  display: none;
+}
+
+.cart-summary {
+  width: 30%;
+  height: fit-content;
+  background-color: #eee;
+  padding: 30px 40px;
+}
+
+.cart-summary dl {
+  margin-bottom: 30px;
+}
+
+.cart-summary div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-summary dt,
+.cart-summary dd {
+  width: 40%;
+}
+
+.cart-summary dt {
+  text-align: start;
+  line-height: 1.5;
+}
+
+.cart-summary dd {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: end;
+}
+
+.cart-summary button {
+  width: 100%;
+  height: fit-content;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  background-color: #222;
+  padding: 15px 20px;
+}
+

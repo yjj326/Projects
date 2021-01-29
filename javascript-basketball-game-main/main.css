@@ -1,0 +1,193 @@
+/* COLOR */
+
+/* 
+  기본 폰트 색상 : #2D2D2D
+  랭킹 표 테두리 : #546FA0
+  각도 조절하는 부분 테두리 : #707070
+  각도 조절하는 부분 화살표 : #D55454
+  파워 게이지 : #E67567
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #2d2d2d;
+}
+
+/* Canvas */
+
+#canvas-area {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+#background {
+  position: absolute;
+  z-index: -2;
+}
+
+#game {
+  position: absolute;
+  z-index: -1;
+}
+
+/* Score & Timer Area */
+
+.area {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.timer {
+  position: absolute;
+  top: 30px;
+  left: 1110px;
+}
+
+.score {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+.large {
+  width: fit-content;
+  height: 75px;
+  font-size: 55px;
+  font-weight: 900;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+.bold {
+  width: fit-content;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Start */
+
+.dark-div {
+  position: absolute;
+  z-index: 1;
+  width: 1270px;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-heading {
+  color: #142145;
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 35px;
+}
+
+.score-box {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 415px;
+  height: 195px;
+  border: 5px solid rgba(58, 67, 98, 0.5);
+  border-radius: 25px;
+  background-color: rgba(58, 67, 98, 0.5);
+  background-image: url("./images/thumb-up.png");
+  background-repeat: no-repeat;
+  background-position: 40px 45px;
+  background-size: 95px;
+  margin-bottom: 30px;
+}
+
+.score-text-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 220px;
+  height: 120px;
+}
+
+.score-text {
+  width: 110px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.div-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  height: fit-content;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.5;
+  border: 5px solid rgba(147, 71, 61, 0.5);
+  border-radius: 25px;
+  background-color: rgba(147, 71, 61, 0.6);
+  padding: 40px 50px;
+}
+
+.smBtn {
+  position: static;
+  transform: none;
+  width: 415px;
+  height: 64px;
+  font-size: 25px;
+  line-height: 2.2;
+  border-radius: 15px;
+  padding: 0;
+}
+
+.new-score {
+  position: absolute;
+  top: -35px;
+  left: -35px;
+}
+
+/* Ranking */
+
+.ranking {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  width: 180px;
+  height: 150px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.ranking tr,
+.ranking td {
+  height: 37px;
+}
+
+.ranking thead > tr {
+  border-top: 4px solid #546FA0;
+  border-bottom: 4px solid #546FA0;
+}
+
+.ranking tbody > tr {
+  border-bottom: 1px solid #546FA0;
+}

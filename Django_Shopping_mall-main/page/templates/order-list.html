@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}웹프로그래밍 쇼핑몰{% endblock %}
+{% block link %}{% static 'css/mypage.css' %}{% endblock %}
+{% block script %}{% static 'js/item.js' %}{% endblock %}
+
+{% block content %}
+<div class="mypage-container">
+  <aside class="category-menu">
+    <h3>My Page</h3>
+    <div class="options">
+      <div class="option-div">
+        <ul>
+          <li><a href="{% url 'editInfo' %}" class="option-title">정보 수정</a></li>
+          <li class="selected"><a href="{% url 'orderList' %}" class="option-title">주문 내역</a></li>
+          <li><a href="{% url 'wishlist' %}" class="option-title">위시리스트</a></li>
+        </ul>
+      </div>
+      <div class="wish-list">
+        <h3>My Wish List</h3>
+        <p>위시리스트에 담긴 상품이 없습니다.</p>
+      </div>
+      <div class="most-viewed">
+        <h3>Most Viewed</h3>
+        <div class="most-viewed-products">
+          <a href="#">
+            <img src="../static/images/chair-4.png" alt="의자" class="product-img-sm" />
+          </a>
+          <div class="most-viewed-desc">
+            <a href="#"><strong>의자</strong></a>
+            <p>50,000</p>
+          </div>
+        </div>
+        <div class="most-viewed-products">
+          <a href="#">
+            <img src="../static/images/sofa-1.png" alt="소파" class="product-img-sm" />
+          </a>
+          <div class="most-viewed-desc">
+            <a href="#"><strong>소파</strong></a>
+            <p>500,000</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  <section class="mypage-content">
+    <h1 class="mypage-title">주문 내역</h1>
+    <div class="ordered-list">
+      <form method="POST" action="#">
+        <table class="order-table">
+          <thead>
+            <tr>
+              <th><span>상품</span></th>
+              <th><span>총 가격</span></th>
+              <th><span>주문일자</span></th>
+              <th><span>배송상태</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="order-item">
+              <td>
+                <a href="{% url 'orderDetail' %}">
+                  <img src="../static/images/sofa-1.png" alt="소파" class="order-item-img" />
+                  <span class="order-name">소파</span>
+                </a>
+              </td>
+              <td><span class="order-price">500,000</span></td>
+              <td><span class="order-date">2020-11-20</span></td>
+              <td><span class="total-item-price">상품 준비 중</span></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="order-item">
+              <td>
+                <a href="{% url 'orderDetail' %}">
+                  <img src="../static/images/chair-4.png" alt="의자" class="order-item-img" />
+                  <span class="order-name">의자</span>
+                </a>
+              </td>
+              <td><span class="order-price">50,000</span></td>
+              <td><span class="order-date">2020-08-20</span></td>
+              <td><span class="total-item-price">배송 완료</span></td>
+            </tr>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </section>
+</div>
+{% endblock %}

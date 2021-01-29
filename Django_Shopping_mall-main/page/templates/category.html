@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}웹프로그래밍 쇼핑몰{% endblock %}
+{% block link %}{% static 'css/category.css' %}{% endblock %}
+{% block script %}{% static 'js/category.js' %}{% endblock %}
+
+{% block content %}
+<div class="category-banner">
+  <a href="#">
+    <img src="../static/images/category-banner.png" />
+    <span>Single Sofa</span>
+  </a>
+</div>
+<div class="category-content">
+  <aside class="category-menu">
+    <h2>Shop By</h2>
+    <div class="options">
+      <h3>Shopping Options</h3>
+      <div class="option-div">
+        <h4 class="option-title">카테고리</h4>
+        <div class="op-content">
+          <ul>
+            <li><a href="#">침대</a></li>
+            <li><a href="#">테이블 & 의자</a></li>
+            <li><a href="#">소파</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="option-div">
+        <h4 class="option-title">제조사</h4>
+        <div class="op-content">
+          <ul>
+            <li><a href="#">먼데이하우스</a></li>
+            <li><a href="#">보니애가구</a></li>
+            <li><a href="#">듀커소파</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="option-div">
+        <h4 class="option-title">가격</h4>
+        <div class="op-content">
+          <ul>
+            <li><a href="#">0 - 99,900</a></li>
+            <li><a href="#">100,000 - 199,900</a></li>
+            <li><a href="#">200,000 - 299,900</a></li>
+            <li><a href="#">300,000 - 399,900</a></li>
+            <li><a href="#">400,000 - 499,900</a></li>
+            <li><a href="#">500,000 - </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wish-list">
+      <h3>My Wish List</h3>
+      <p>위시리스트에 담긴 상품이 없습니다.</p>
+    </div>
+    <div class="most-viewed">
+      <h3>Most Viewed</h3>
+      <div class="most-viewed-products">
+        <div class="sm-img-container">
+          <img src="../static/images/chair-4.png" alt="의자" class="product-img-sm" />
+          <button type="button" class="sm-add-cart"><span>장바구니에 추가하기</span></button>
+        </div>
+        <div class="most-viewed-desc">
+          <strong>의자</strong>
+          <p>50,000</p>
+        </div>
+      </div>
+      <div class="most-viewed-products">
+        <div class="sm-img-container">
+          <img src="../static/images/sofa-1.png" alt="소파" class="product-img-sm" />
+          <button type="button" class="sm-add-cart"><span>장바구니에 추가하기</span></button>
+        </div>
+        <div class="most-viewed-desc">
+          <strong>소파</strong>
+          <p>500,000</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <section class="category-products">
+    <h1>가구</h1>
+    <nav class="products-nav">
+      <p>전체 6개</p>
+      <div class="sort">
+        <label for="sort-by">Sort By</label>
+        <select id="sort-by">
+          <option value="name">이름순</option>
+          <option value="price">가격순</option>
+          <option value="best">인기순</option>
+        </select>
+      </div>
+    </nav>
+    <div class="category-list">
+      <div class="list-item">
+        <div class="image-container">
+          <a href="{% url 'item' %}">
+            <img src="../static/images/bed-1.png" alt="침대" class="product-img" />
+          </a>
+          <div class="add-cart">
+            <button type="button"><span>Add To Cart</span></button>
+          </div>
+          <div class="add-wishlist">
+            <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+          </div>
+        </div>
+        <strong><a href="{% url 'item' %}">침대</a></strong>
+        <span>300,000</span>
+      </div>
+      <div class="list-item">
+        <div class="image-container">
+          <a href="{% url 'item' %}">
+            <img src="../static/images/bed-2.png" alt="침대" class="product-img" />
+          </a>
+          <div class="add-cart">
+            <button type="button"><span>Add To Cart</span></button>
+          </div>
+          <div class="add-wishlist">
+            <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+          </div>
+        </div>
+        <strong><a href="{% url 'item' %}">침대</a></strong>
+        <span>250,000</span>
+      </div>
+      <div class="list-item">
+        <div class="image-container">
+          <a href="{% url 'item' %}">
+            <img src="../static/images/table-1.png" alt="테이블" class="product-img" />
+          </a> 
+          <div class="add-cart">
+            <button type="button"><span>Add To Cart</span></button>
+          </div>
+          <div class="add-wishlist">
+            <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+          </div>
+        </div>
+        <strong><a href="{% url 'item' %}">테이블</a></strong>
+        <span>100,000</span>
+      </div>
+      <div class="list-item">
+        <div class="image-container">
+          <a href="{% url 'item' %}">
+            <img src="../static/images/chair-4.png" alt="의자" class="product-img" />
+          </a>
+          <div class="add-cart">
+            <button type="button"><span>Add To Cart</span></button>
+          </div>
+          <div class="add-wishlist">
+            <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+          </div>
+        </div>
+        <strong><a href="{% url 'item' %}">의자</a></strong>
+        <span>50,000</span>
+      </div>
+      <div class="list-item">
+        <div class="image-container">
+          <a href="{% url 'item' %}">
+            <img src="../static/images/sofa-1.png" alt="소파" class="product-img" />
+          </a>
+          <div class="add-cart">
+            <button type="button"><span>Add To Cart</span></button>
+          </div>
+          <div class="add-wishlist">
+            <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+          </div>
+        </div>
+        <strong><a href="{% url 'item' %}">소파</a></strong>
+        <span>500,000</span>
+      </div>
+      <div class="list-item">
+        <div class="image-container">
+          <a href="{% url 'item' %}">
+            <img src="../static/images/sofa-2.png" alt="소파" class="product-img" />
+          </a>
+          <div class="add-cart">
+            <button type="button"><span>Add To Cart</span></button>
+          </div>
+          <div class="add-wishlist">
+            <button type="button" class="wish-btn"><span>Add To Wishlist</span></button>
+          </div>
+        </div>
+        <strong><a href="{% url 'item' %}">소파</a></strong>
+        <span>600,000</span>
+      </div>
+    </div>
+
+  <!-- {% comment %}
+    {% block content %}
+    <div class="item">
+        <p>
+            {% for list in itemList %}
+                상품이름 : {{ list.prdName }} <br>
+                가격 : {{ list.price }} <br>
+            {% endfor %}
+        </p>
+        <p>
+            <a href="{% url 'newItem' %}">상품추가</a>
+        </p>
+    </div>
+    {% endblock %}
+    {% endcomment %} -->
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}웹프로그래밍 쇼핑몰{% endblock %}
+{% block link %}{% static 'css/mypage.css' %}{% endblock %}
+{% block script %}{% static 'js/item.js' %}{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if error == 'ok' %}
+<script>
+    alert("성공적으로 정보가 수정되었습니다.");
+</script>
+{% elif error == 'password_confirm' %}
+<script>
+  alert("비밀번호를 입력하거나 비밀번호를 다시 확인해주세요.");
+</script>
+{% elif error == 'notice' %}
+<script>
+  alert("정보를 수정할 경우 비밀번호도 같이 입력해주어야 합니다.");
+</script>
+{% endif %}
+
+<div class="mypage-container">
+  <aside class="category-menu">
+    <h3>My Page</h3>
+    <div class="options">
+      <div class="option-div">
+        <ul>
+          <li class="selected"><a href="{% url 'editInfo' %}" class="option-title">정보 수정</a></li>
+          <li><a href="{% url 'orderList' %}" class="option-title">주문 내역</a></li>
+          <li><a href="{% url 'wishlist' %}" class="option-title">위시리스트</a></li>
+        </ul>
+      </div>
+      <div class="wish-list">
+        <h3>My Wish List</h3>
+        <p>위시리스트에 담긴 상품이 없습니다.</p>
+      </div>
+      <div class="most-viewed">
+        <h3>Most Viewed</h3>
+        <div class="most-viewed-products">
+          <a href="#">
+            <img src="../static/images/chair-4.png" alt="의자" class="product-img-sm" />
+          </a>
+          <div class="most-viewed-desc">
+            <a href="#"><strong>의자</strong></a>
+            <p>50,000</p>
+          </div>
+        </div>
+        <div class="most-viewed-products">
+          <a href="#">
+            <img src="../static/images/sofa-1.png" alt="소파" class="product-img-sm" />
+          </a>
+          <div class="most-viewed-desc">
+            <a href="#"><strong>소파</strong></a>
+            <p>500,000</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  <section class="mypage-content">
+    <h1 class="mypage-title">정보 수정</h1>
+    <form method="POST" action="{% url 'editInfo' %}" class="edit-info" >
+      {% csrf_token %}
+      <label for="name" class="required">이름</label>
+      <input type="text" id="name" value="{{ user.username }}" readonly/>
+      <label for="id" class="required">아이디</label>
+      <input type="text" id="id" value="{{ user.user_id }}" readonly />
+      <label for="address" class="required">이메일</label>
+      <input type="text" id="address" name="address" value="{{ user.email }}" readonly/>
+      <label for="password" class="required" >비밀번호</label>
+      <input type="password" id="password" name="password" required/>
+      <label for="re-password" class="required">비밀번호 확인</label>
+      <input type="password" id="re-password" name="re-password" required />
+      <label for="address" class="required">주소</label>
+      <input type="text" id="address" name="address" value="{{ user.address }}" />
+      <label for="phone_number" class="required">휴대폰 번호</label>
+      <input type="text" id="address" name="phone_number" value="{{ user.phone_number }}" />
+      <button type="submit">수정하기</button>
+    </form>
+  </section>
+</div>
+
+{% else %}
+
+<div class="mypage-container">
+  <section class="mypage-content">
+    <h1>로그인이 필요한 기능입니다.</h1> <br>
+    <p>
+      <a href="{% url 'login' %}" class="login-link">클릭하여 로그인하기</a>
+    </p>
+  </section>
+</div>
+
+{% endif %}
+
+{% endblock %}

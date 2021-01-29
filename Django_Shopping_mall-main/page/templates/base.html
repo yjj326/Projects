@@ -1,0 +1,225 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% block script %}{% endblock %}"></script>
+    {% block extrahead %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/grid.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <a href="{% url 'main' %}" class="main">
+                <h1>Furniture</h1>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-md-9">
+              <ul class="menu-list black">
+                <li class="menu-list-item 1">
+                  <a href="{% url 'category' %}">가구</a>
+                  <div class="item-inner">
+                    <ul>
+                      <li><a href="{% url 'category' %}">침대</a></li>
+                      <li><a href="{% url 'category' %}">테이블 & 의자</a></li>
+                      <li><a href="{% url 'category' %}">소파</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-list-item 2">
+                  <a href="{% url 'category' %}">패브릭</a>
+                  <div class="item-inner">
+                    <ul>
+                      <li><a href="{% url 'category' %}">침구</a></li>
+                      <li><a href="{% url 'category' %}">카페트 & 러그</a></li>
+                      <li><a href="{% url 'category' %}">커튼 & 블라인드</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-list-item 3">
+                  <a href="{% url 'category' %}">홈데코</a>
+                  <div class="item-inner">
+                    <ul>
+                      <li><a href="{% url 'category' %}">조명</a></li>
+                      <li><a href="{% url 'category' %}">시계</a></li>
+                      <li><a href="{% url 'category' %}">캔들 & 디퓨저</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-list-item 4">
+                  <a href="{% url 'category' %}">가전</a>
+                  <div class="item-inner">
+                    <ul>
+                      <li><a href="{% url 'category' %}">주방가전</a></li>
+                      <li><a href="{% url 'category' %}">생활가전</a></li>
+                      <li><a href="{% url 'category' %}">음향 & 영상가전</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <div class="mobile-menu">
+                <button><span>mobile menu</span></button>
+                <div class="mobile-menu-box">
+                  <ul class="mobile-menu-list">
+                    <li class="mobile-menu-list-item">
+                      <a href="#">가구</a>
+                      <button><span>더보기</span></button>
+                      <ul>
+                        <li><a href="{% url 'category' %}">침대</a></li>
+                        <li><a href="{% url 'category' %}">테이블 & 의자</a></li>
+                        <li><a href="{% url 'category' %}">소파</a></li>
+                      </ul>
+                    </li>
+                    <li class="mobile-menu-list-item">
+                      <a href="{% url 'category' %}">패브릭</a>
+                      <button><span>더보기</span></button>
+                      <ul>
+                        <li><a href="{% url 'category' %}">침구</a></li>
+                        <li><a href="{% url 'category' %}">카페트 & 러그</a></li>
+                        <li><a href="{% url 'category' %}">커튼 & 블라인드</a></li>
+                      </ul>
+                    </li>
+                    <li class="mobile-menu-list-item">
+                      <a href="{% url 'category' %}">홈데코</a>
+                      <button><span>더보기</span></button>
+                      <ul>
+                        <li><a href="{% url 'category' %}">조명</a></li>
+                        <li><a href="{% url 'category' %}">시계</a></li>
+                        <li><a href="{% url 'category' %}">캔들 & 디퓨저</a></li>
+                      </ul>
+                    </li>
+                    <li class="mobile-menu-list-item">
+                      <a href="{% url 'category' %}">가전</a>
+                      <button><span>더보기</span></button>
+                      <ul>
+                        <li><a href="{% url 'category' %}">주방가전</a></li>
+                        <li><a href="{% url 'category' %}">생활가전</a></li>
+                        <li><a href="{% url 'category' %}">음향 & 영상가전</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="menu-icons">
+                <div class="search-box">
+                  <form action="#" class="search-form">
+                    <input id="search" type="text" placeholder="Search for item.." />
+                    <button type="submit" class="search-btn">
+                      <span>검색</span>
+                    </button>
+                  </form>
+                </div>
+                <div class="user-box">
+                  <a href="#"><span>user</span></a>
+                  <div class="user-menu">
+                    <ul>
+                      {% if user.is_authenticated %}
+                        <li>{{ user.username }}님 어서오세요.</li>
+                        <li><a href="{% url 'logout' %}">로그아웃</a></li>
+                        <li><a href="{% url 'editInfo' %}">마이페이지</a></li>
+                      {% else %}
+                        <li><a href="{% url 'register' %}">회원가입</a></li>
+                        <li><a href="{% url 'login' %}">로그인</a></li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="cart-box">
+                  <a href="
+                  {% if user.is_authenticated %}
+                  {% url 'cart' %}
+                  {% else %}
+                  {% url 'login' %}
+                  {% endif %}
+                  "><span>cart</span></a>
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <h1 class="footer-title">Furniture</h1>
+            <p class="footer-desc">
+              2020년 2학기 웹프로그래밍 기말 프로젝트로 만든 가구 쇼핑몰 웹페이지입니다. HTML, CSS, JQuery, Django를 사용해 개발하였습니다.
+            </p>
+            <a href="{% url 'faq' %}"><h2 class="footer-subtitle">FAQ 바로가기</h2></a>
+          </div>
+          <div class="col-12 col-md-3">
+            <h2 class="footer-subtitle">Team Member</h2>
+            <div class="member">
+              <h3>곽민아</h3>
+              <ul>
+                <li><a href="https://www.instagram.com/jul.11_m/" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/mina-gwak" target="_blank">Github</a></li>
+              </ul>
+            </div>
+            <div class="member">
+              <h3>엄예지</h3>
+              <ul>
+                <li><a href="https://www.instagram.com/_whyj__" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/yjj326" target="_blank">Github</a></li>
+              </ul>
+            </div>
+            <div class="member">
+              <h3>한준혁</h3>
+              <ul>
+                <li><a href="https://www.instagram.com/jo__on.h/" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/Han-Joon-Hyeok" target="_blank">Github</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <h2 class="footer-subtitle">Product Tags</h2>
+            <div class="product-tags">
+              <a href="{% url 'category' %}">침대</a>
+              <a href="{% url 'category' %}">테이블&의자</a>
+              <a href="{% url 'category' %}">소파</a>
+              <a href="{% url 'category' %}">침구</a>
+              <a href="{% url 'category' %}">카페트&러그</a>
+              <a href="{% url 'category' %}">커튼&블라인드</a>
+              <a href="{% url 'category' %}">조명</a>
+              <a href="{% url 'category' %}">시계</a>
+              <a href="{% url 'category' %}">캔들&디퓨저</a>
+              <a href="{% url 'category' %}">주방가전</a>
+              <a href="{% url 'category' %}">생활가전</a>
+              <a href="{% url 'category' %}">음향&영상가전</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

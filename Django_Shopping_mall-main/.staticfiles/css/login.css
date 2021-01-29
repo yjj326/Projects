@@ -1,0 +1,106 @@
+body {
+  font-family: 'NanumSquare', sans-serif;
+  color: #222;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+hr{
+  margin: 10px 0;
+}
+
+p {
+  font-size: 15px;
+}
+
+div.main-wrapper{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+}
+
+.registered-customers {
+  width: 500px;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+fieldset {
+  border: none;
+  margin-left: -10px;
+}
+
+.border {
+  border-bottom: 1px solid black;
+  width: 500px;
+}
+
+.new-customers {
+  width: 500px;
+  font-size: 20px;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  float: left;
+}
+
+button:hover {
+  color: white;
+  background-color: #F9B61E;
+}
+
+a {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(83, 77, 77)
+}
+
+a:hover {
+  color: #F9B61E;
+}
+
+.remind {
+  margin-left: 350px;
+  float: left;
+  margin-top: -30px;
+}
+
+.fon {
+  font-size: 10px;
+}
+
+.create-account-link {
+  margin-top: 10px;
+}
+
+label {
+  float: left;
+  width: 90px;
+  text-align: right;
+}
+
+input {
+  margin-left: 10px;
+  outline-style: none;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  width: 175px;
+}
+
+.password-field {
+  margin-top: 10px;
+}
+
+input:focus {
+  box-shadow: 1px 1px rgb(216, 205, 205);
+}

@@ -1,0 +1,110 @@
+
+div.main-wrapper{
+  width: 50%;
+  margin: 40px auto;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+hr {
+  width: 720px;
+  margin-left: 0px;
+}
+
+fieldset {
+  border: none;
+  margin-left: -10px;
+}
+
+.info-note {
+  font-size: 20px;
+}
+
+.sign-info {
+  margin-top: 10px;
+}
+
+.c {
+  font-size: 15px;
+  float: left;
+  width: 200px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.h {
+  margin-left: 30px;
+  outline-style: none;
+  height: 26px;
+  width: 500px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  color: black;
+}
+
+.h:focus {
+  box-shadow: 1px 1px rgb(216, 205, 205);
+}
+
+.name-info {
+  margin-left: -20px;
+  margin-top: 30px;
+}
+
+.login-info {
+  margin-left: -20px;
+  margin-top: 30px;
+}
+
+.first,
+.last,
+.input-newsletter,
+.email,
+.password,
+.con-password,
+.register-submit {
+  margin-top: 30px;
+}
+
+input.register-submit {
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 10px 10px 10px 10px;
+  outline: 0;
+  border: 0;
+  font-size: 18px;
+  float: left;
+  cursor: pointer;
+}
+
+input.register-submit:hover {
+  color: white;
+  background-color: #F9B61E;
+}
+
+.newsletter {
+  margin-left: 258px;
+  margin-top: -20px;
+  font-size: 13px
+}
+
+.input-newsletter {
+  margin-left: 230px;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #F9B61E;
+}
+
+.back {
+  margin-left: 680px;
+  margin-top: 30px;
+}

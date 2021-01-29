@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}로그인{% endblock %}
+{% block link %}{% static 'css/login.css' %}{% endblock %}
+{% block script %}{% static 'js/login.js' %}{% endblock %}
+
+{% block content %}
+{% if error == 'wronginfo' %}
+<script>
+    alert("로그인 정보가 잘못되었습니다. 다시 입력해주세요.");
+</script>
+{% endif %}
+<div class="main-wrapper">
+    <h1 class="page-title">Customer Login </h1>
+
+    <div class="registered-customers">
+        <span>로그인</span>
+        <hr>
+        <div class="login-note">
+            <p>누구나 예쁜 집에 살 수 있어!</p>
+        </div>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <fieldset class="fieldset-login">
+
+                <div class="email-field">
+                    <label class="label" for="user_id">
+                        <span>아이디</span>
+                    </label>
+                    <div class="emaiil-input">
+                        <input name="user_id" type="text" class="" required>
+                    </div>
+                </div>
+
+                <div class="password-field">
+                    <label class="label" for="password"><span>비밀번호</span>
+                    </label>
+                    <div class="pass-input">
+                        <input name="password" type="password" id="pass" required>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    <button type="submit" class="login-submit" id="send">
+                        로그인
+                    </button>
+                </div>
+        </form>
+
+            <div class="remind">
+                <a class="remind-pass" href="#">
+                    <span>비밀번호 찾기</span>
+                </a>
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="new-customers">
+        <span>회원가입</span>
+        <hr>
+        <div class="new-note">
+            <p>계정이 없으시다면 가입해주세요. 가입시 더 많은 혜택을 누릴 수 있습니다.</p>
+        </div>
+        <div class="create-account">
+            <a href="{% url 'register' %}" class="create-account-action">
+                <button type="button" class="create-account-link" onclick="location.href='register.html'">
+                    <span><b>회원가입하기</b></span>
+                </button>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- <form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    <h1>로그인</h1>
+    <div>
+        <input type="text" name="user_id" placeholder="아이디">
+    </div>
+    <div>
+        <input type="password" name="password" placeholder="비밀번호">
+    </div>
+    <div>
+        <input type="submit" value="로그인">
+    </div>
+</form>
+<a href="{%url 'register'%}" id="register">회원 가입</a> -->
+{% endblock %}

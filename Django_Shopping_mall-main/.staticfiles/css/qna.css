@@ -1,0 +1,100 @@
+.faq-title {
+  width: 100%;
+  font-weight: 900;
+  margin: 30px 0;
+}
+
+.address-info {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.center {
+    background-color: #f9b71e38;
+    width: 50%;
+    height: 450px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.center-title,
+.center-address {
+  margin-left: 15px;
+}
+
+.center-title h1,
+.route {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 20px 0 30px;
+}
+
+.copy {
+    outline: 0;
+    border: 0;
+    background-color: #f9b71e38;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.google-map {
+    border: 1.5px solid #F9B61E;
+}
+
+.menu-ul {
+  margin-bottom: 20px;
+}
+
+.menu-ul li {
+    display: inline;
+    padding: 0px 30px;
+    font-weight: 600;
+}
+
+.menu-ul li:hover {
+    color: #F9B61E;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: rgba(26, 25, 25, 0.171);
+}
+
+.menu-ul li.on {
+    color: #F9B61E;
+}
+
+.col {
+    color: #F9B61E;
+    font-weight: bold;
+}
+
+.h {
+    display: none;
+}
+
+.T {
+    cursor: pointer;
+}
+
+.faq-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1140px;
+  height: fit-content;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.qna-list {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+pre{
+    font-size: 16px;
+    font-family: 'NanumSquare';
+}

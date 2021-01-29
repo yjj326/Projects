@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}웹프로그래밍 쇼핑몰{% endblock %}
+{% block link %}{% static 'css/cart.css' %}{% endblock %}
+{% block script %}{% static 'js/cart.js' %}{% endblock %}
+
+{% block content %}
+<div class="cart-container">
+  <h1 class="cart-title">장바구니</h1>
+  <div class="cart-content">
+    <div class="cart-products">
+      <form method="POST" action="#">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th><span>상품</span></th>
+              <th><span>가격</span></th>
+              <th><span>수량</span></th>
+              <th><span>총 가격</span></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cart-item">
+              <td>
+                <a href="#">
+                  <img src="../static/images/sofa-1.png" alt="소파" class="cart-item-img" />
+                  <span class="item-name">소파</span>
+                </a>
+              </td>
+              <td><span class="item-price">500,000</span></td>
+              <td>
+                <input type="number" value="1" min="1" class="cart-item-quantity" />
+              </td>
+              <td><span class="total-item-price">500,000</span></td>
+              <td><button><span>상품 삭제</span></button></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="cart-item">
+              <td>
+                <a href="#">
+                  <img src="../static/images/chair-4.png" alt="의자" class="cart-item-img" />
+                  <span class="item-name">의자</span>
+                </a>
+              </td>
+              <td><span class="item-price">70,000</span></td>
+              <td>
+                <input type="number" value="1" min="1" class="cart-item-quantity" />
+              </td>
+              <td><span class="total-item-price">70,000</span></td>
+              <td><button><span>상품 삭제</span></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <div class="cart-summary">
+      <dl>
+          <div>
+            <dt>총 상품금액</dt>
+            <dd class="total-products-price"></dd>
+          </div>
+          <div>
+            <dt>총 배송비</dt>
+            <dd class="shipping-fee"></dd>
+          </div>
+          <div>
+            <dt>결제금액</dt>
+            <dd class="total-price"></dd>
+          </div>
+      </dl>
+      <button>구매하기</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

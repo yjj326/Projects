@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}FAQ{% endblock %}
+{% block link %}{% static 'css/qna.css' %}{% endblock %}
+{% block script %}{% static 'js/qna.js' %}{% endblock %}
+{% block extrahead %}
+<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="faq-content">
+  <h1 class="faq-title">FAQ</h1>
+  <div class="center">
+    <div class="center-title">
+      <h1>고객센터</h1>
+    </div>
+    <div class="center-address">
+      <div class="address-info ">
+        <div class="runtime">
+          <span>운영시간 : 평일 09:00 - 18:00 (주말 & 공휴일 제외)</span>
+        </div>
+        <div class="info-email">
+          <span>이메일 : <span id="email">Webproject@mju.ac.kr</span>
+            <button class="copy" onclick="copyToClipboard('email')">이메일 복사</button></span>
+        </div>
+        <div class="pnum">
+          <span>전화 : 1800-1234</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="center map">
+    <h1 class="route">위치</h1>
+    <iframe class="google-map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.9324275729154!2d126.9212564127941!3d37.580208831107505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c985990062d73%3A0xc03ab15109e8cc97!2z66qF7KeA64yA7ZWZ6rWQIOyduOusuOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1606051124592!5m2!1sko!2skr"
+      width="500" height="300" frameborder="0" style="border:1;" allowfullscreen="" aria-hidden="false"
+      tabindex="0"></iframe>
+  </div>
+  
+  <div class="qna-list">
+    <div class="qna">
+      <div class="qna-menu">
+        <ul class="menu-ul">
+          <li class="entire on">전체</li>
+          <li class="order-payment">주문/결제</li>
+          <li class="exchange">반품/교환</li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+    <div class="entire-contents">
+      <div class="entire-contents-1 E O">
+        <br />
+        <p class="entire-content-1 T"><span class="col">&nbsp;Q </span>결제 방법에는 어떤 것이 있나요?</p>
+        <div hidden class="contents-1"><br /><span class="col">&nbsp;A </span>신용카드 및 체크카드, 무통장 입금, 휴대폰 소액결제, 네이버페이를 이용해 결제
+          가능합니다.</div>
+        <br />
+        <hr>
+      </div>
+      <div class="entire-contents-2 E O">
+        <br />
+        <p class="entire-content-2 T"><span class="col">&nbsp;Q </span>비회원주문 및 전화주문이 가능한가요?</p>
+        <div hidden class="contents-2"><br /><span class="col">&nbsp;A </span>전화주문은 준비중에 있습니다. 비회원 주문은 가능하지만 일부 상품에 한해 제한되어있습니다.</div>
+        <br />
+        <hr>
+      </div>
+      <div class="entire-contents-3 E O">
+        <br />
+        <p class="entire-content-3 T"><span class="col">&nbsp;Q </span>주문 후 결제 방법을 변경하고 싶은데 어떻게 해야 하나요?</p>
+        <div hidden class="contents-3"><br /><span class="col">&nbsp;A </span>결제 후 결제 정보 변경은 불가능 합니다.</div>
+        <br />
+        <hr>
+      </div>
+      <div class="entire-contents-4 E C">
+        <br />
+        <p class="entire-content-4 T"><span class="col">&nbsp;Q </span>제품의 교환 또는 반품을 할 수 있나요?</p>
+        <div hidden class="contents-4"><br /><span class="col">&nbsp;A </span>상품을 수령하신 후 7일 이내에 교환, 반품이 가능합니며, 고객님의 변심에 의한
+          교환/반품의 경우 배송비용이 부과될 수 있습니다.<br />
+          <pre>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;※단, 입금 대기 및 결제 완료 단계에서는 취소 후 재주문을 통해 변경 가능합니다.<br />
+  
+            &nbsp;&nbsp;&nbsp;&nbsp;- 고객님의 책임 사유로 인해 상품 등이 멸실 또는 훼손된 경우<br />
+    
+            &nbsp;&nbsp;&nbsp;&nbsp;- 개봉 및 포장이 훼손으로 상품가치가 현저히 상실된 경우<br />
+    
+            &nbsp;&nbsp;&nbsp;&nbsp;- 시간 경과에 의해 재판매가 어려울정도로 상품 가치가 현저히 저하된 경우<br />
+    
+            &nbsp;&nbsp;&nbsp;&nbsp;- 고객주문 확인 후 상품제작에 들어가는 주문 제작 상품<br />
+    
+            &nbsp;&nbsp;&nbsp;&nbsp;- 직접 조립하는(DIY) 상폼을 조립 한 경우
+          </pre>
+          </div>
+        <br />
+        <hr>
+      </div>
+      <div class="entire-contents-5 E C">
+        <br />
+        <p class="entire-content-5 T"><span class="col">&nbsp;Q </span>반품 시, 사은품도 같이 반품해야 하나요?</p>
+        <div hidden class="contents-5"><br /><span class="col">&nbsp;A </span>사은품도 같이 동봉하여 반품해 주셔야 반품처리가 완료됩니다.</div>
+        <br />
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
