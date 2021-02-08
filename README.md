@@ -1,6 +1,6 @@
  *[Projects]*
 ## 웹프로그래밍 실습1-농구공 게임
-<javascript-basketball-game-main> 
+<avascript-basketball-game-main> 
   
 
 
