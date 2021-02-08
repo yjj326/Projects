@@ -1,5 +1,5 @@
  #*[Projects]*
-## 웹프로그래밍 실습1-농구공 게임 <basketball-game-main>
+## 웹프로그래밍 실습1-농구공 게임 <Javascript-basketball_game-main>
 
 
 
