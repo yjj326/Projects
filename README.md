@@ -1,7 +1,6 @@
  #*[Projects]*
-## 웹프로그래밍 실습1-농구공 게임
-<Javascript-basketball-game-main> 
-  
+## 웹프로그래밍 실습1-농구공 게임 <basketball-game-main>
+
 
 
   - 제한된 시간(30초) 안에 농구공을 골대에 넣는 게임.
@@ -14,7 +13,6 @@
 
 
 
-## 웹프로그래밍 실습2-쇼핑몰 만들기
-<Django-Shopping_mall-main>
-<Javascript-basketball-game-main> 
+## 웹프로그래밍 실습2-쇼핑몰 만들기 <Django-Shopping_mall-main>
+
 
